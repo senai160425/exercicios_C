@@ -1,0 +1,30 @@
+//Preencher um vetor com 5 números e à medida que for digitado o
+número, calcular o cubo e mostrar em outro vetor. Mostrar os dois
+vetores.
+
+#include <stdio.h>
+
+int main() {
+   
+    float numeros[5], cubos[5];
+
+   
+    for (int i = 0; i < 5; i++) {
+        printf("Digite o %dº número: ", i + 1);
+        scanf("%f", &numeros[i]);
+        cubos[i] = numeros[i] * numeros[i] * numeros[i];  
+    }
+
+    
+    printf("\nVetor de números:\n");
+    for (int i = 0; i < 5; i++) {
+        printf("%.2f ", numeros[i]);
+    }
+
+    printf("\nVetor de cubos:\n");
+    for (int i = 0; i < 5; i++) {
+        printf("%.2f ", cubos[i]);
+    }
+
+    return 0;
+}
